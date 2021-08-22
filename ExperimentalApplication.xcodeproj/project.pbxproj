@@ -17,6 +17,7 @@
 		55518F5426D1249C00FCD06E /* ExperimentalApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55518F5326D1249C00FCD06E /* ExperimentalApplicationUITests.swift */; };
 		55518F6226D124B100FCD06E /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55518F6126D124B100FCD06E /* CollectionViewController.swift */; };
 		555F73F226D22D33003D4D82 /* TestableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F73F126D22D33003D4D82 /* TestableModel.swift */; };
+		5578856926D269C80071505D /* URLSessionExperiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578856826D269C80071505D /* URLSessionExperiment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		55518F5526D1249C00FCD06E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55518F6126D124B100FCD06E /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		555F73F126D22D33003D4D82 /* TestableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestableModel.swift; sourceTree = "<group>"; };
+		5578856826D269C80071505D /* URLSessionExperiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExperiment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				55518F6126D124B100FCD06E /* CollectionViewController.swift */,
 				555F73F126D22D33003D4D82 /* TestableModel.swift */,
+				5578856826D269C80071505D /* URLSessionExperiment.swift */,
 				555F73F326D22D72003D4D82 /* Unnecessary */,
 				55518F3F26D1249C00FCD06E /* Info.plist */,
 				55518F3326D1249A00FCD06E /* SceneDelegate.swift */,
@@ -277,6 +280,7 @@
 				55518F3226D1249A00FCD06E /* AppDelegate.swift in Sources */,
 				555F73F226D22D33003D4D82 /* TestableModel.swift in Sources */,
 				55518F3426D1249A00FCD06E /* SceneDelegate.swift in Sources */,
+				5578856926D269C80071505D /* URLSessionExperiment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
