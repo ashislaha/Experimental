@@ -21,12 +21,42 @@ class CollectionViewController: UICollectionViewController {
 		super.init(collectionViewLayout: compositionalLayout)
 	}
 	
+	private let model = TestableModel()
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		collectionView.backgroundColor = .white
 		collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
 		collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: "header", withReuseIdentifier: "header")
+		
+		navigaitonBarAndNavigationItemTesting()
+	}
+	
+	
+	private func navigaitonBarAndNavigationItemTesting() {
+		navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+		navigationItem.title = "Testing"
+		
+		navigationController?.navigationBar.barTintColor = .blue
+		
+		// as navigation bar is managed by navigation controller, we cannot push a new navigation item directly to navigation bar.
+		// Instead of that we can update the controller navigation item.
+		
+		let newNavigationItem = UINavigationItem(title: "New Item")
+		newNavigationItem.leftBarButtonItems = [
+			UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: nil),
+			UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: nil),
+		]
+		newNavigationItem.rightBarButtonItems = [
+			UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil),
+			UIBarButtonItem(barButtonSystemItem: .done, target: self, action: nil),
+		]
+		
+		navigationItem.leftBarButtonItems = newNavigationItem.leftBarButtonItems
+		navigationItem.rightBarButtonItems = newNavigationItem.rightBarButtonItems
+		navigationItem.prompt = "This is a prompt title"
+		
 	}
 	
 	required init?(coder: NSCoder) {

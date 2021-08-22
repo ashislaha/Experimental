@@ -25,9 +25,65 @@ class ExperimentalApplicationTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
+		let model = TestableModel()
+		
         self.measure {
             // Put the code you want to measure the time of here.
+			let sum = model.addNumber(10,20)
+			print(sum)
         }
     }
 
+}
+
+extension ExperimentalApplicationTests {
+	
+	func testAddNumber() {
+		let model = TestableModel()
+		let sum = model.addNumber(10,20)
+		let isCorrect = sum == 30
+		XCTAssertTrue(isCorrect)
+		
+		let add2 = model.addNumber(2, 3)
+		XCTAssertEqual(add2, 5, "Both are not equal")
+		
+	}
+	
+	func testGoogleServerHit() {		
+		
+		let promise = expectation(description: "status code: 200")
+		let model = TestableModel()
+		model.asyncGoogleServerHit { isSuccess in
+			if isSuccess {
+				promise.fulfill()
+			} else {
+				XCTFail("Error")
+			}
+		}
+		
+		/*
+		let promise = expectation(description: "status code: 200")
+		let url = URL(string: "https://www.google.com")!
+		
+		let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
+			if error != nil {
+				XCTFail("Error: \(error?.localizedDescription ?? "")")
+			}
+			
+			if let response = response as? HTTPURLResponse {
+				if response.statusCode == 200 {
+					promise.fulfill()
+					
+				} else {
+					XCTFail("status code: \(response.statusCode)")
+				}
+			}
+		}
+		dataTask.resume()
+		*/
+		
+		wait(for: [promise], timeout: 3.0)
+		
+		
+	}
 }

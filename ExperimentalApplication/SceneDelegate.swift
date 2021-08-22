@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		
 		let window = UIWindow(windowScene: scene)
 		self.window = window
-		let containerVC = CollectionViewController()
+		let containerVC = UINavigationController(rootViewController: CollectionViewController())
 		window.rootViewController = containerVC
 		window.makeKeyAndVisible()
 	}

@@ -16,6 +16,7 @@
 		55518F4926D1249C00FCD06E /* ExperimentalApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55518F4826D1249C00FCD06E /* ExperimentalApplicationTests.swift */; };
 		55518F5426D1249C00FCD06E /* ExperimentalApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55518F5326D1249C00FCD06E /* ExperimentalApplicationUITests.swift */; };
 		55518F6226D124B100FCD06E /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55518F6126D124B100FCD06E /* CollectionViewController.swift */; };
+		555F73F226D22D33003D4D82 /* TestableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F73F126D22D33003D4D82 /* TestableModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		55518F5326D1249C00FCD06E /* ExperimentalApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentalApplicationUITests.swift; sourceTree = "<group>"; };
 		55518F5526D1249C00FCD06E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55518F6126D124B100FCD06E /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		555F73F126D22D33003D4D82 /* TestableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestableModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +103,12 @@
 		55518F3026D1249A00FCD06E /* ExperimentalApplication */ = {
 			isa = PBXGroup;
 			children = (
-				55518F3126D1249A00FCD06E /* AppDelegate.swift */,
 				55518F6126D124B100FCD06E /* CollectionViewController.swift */,
-				55518F3326D1249A00FCD06E /* SceneDelegate.swift */,
-				55518F3526D1249A00FCD06E /* ViewController.swift */,
-				55518F3726D1249A00FCD06E /* Main.storyboard */,
-				55518F3A26D1249C00FCD06E /* Assets.xcassets */,
-				55518F3C26D1249C00FCD06E /* LaunchScreen.storyboard */,
+				555F73F126D22D33003D4D82 /* TestableModel.swift */,
+				555F73F326D22D72003D4D82 /* Unnecessary */,
 				55518F3F26D1249C00FCD06E /* Info.plist */,
+				55518F3326D1249A00FCD06E /* SceneDelegate.swift */,
+				55518F3126D1249A00FCD06E /* AppDelegate.swift */,
 			);
 			path = ExperimentalApplication;
 			sourceTree = "<group>";
@@ -129,6 +129,17 @@
 				55518F5526D1249C00FCD06E /* Info.plist */,
 			);
 			path = ExperimentalApplicationUITests;
+			sourceTree = "<group>";
+		};
+		555F73F326D22D72003D4D82 /* Unnecessary */ = {
+			isa = PBXGroup;
+			children = (
+				55518F3526D1249A00FCD06E /* ViewController.swift */,
+				55518F3726D1249A00FCD06E /* Main.storyboard */,
+				55518F3A26D1249C00FCD06E /* Assets.xcassets */,
+				55518F3C26D1249C00FCD06E /* LaunchScreen.storyboard */,
+			);
+			path = Unnecessary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +275,7 @@
 				55518F6226D124B100FCD06E /* CollectionViewController.swift in Sources */,
 				55518F3626D1249A00FCD06E /* ViewController.swift in Sources */,
 				55518F3226D1249A00FCD06E /* AppDelegate.swift in Sources */,
+				555F73F226D22D33003D4D82 /* TestableModel.swift in Sources */,
 				55518F3426D1249A00FCD06E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
