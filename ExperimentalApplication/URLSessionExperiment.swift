@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 /// In this file, we will create a tiny network layer and explore more on URLSession
 
@@ -38,6 +39,10 @@ class NetworkLayer: NSObject {
 		// Session Configuration has Cookies storage, URL credential storage, URL cache etc. We can configure them as per need.
 		// we can set up time-out value, http request headers, cache policy etc.
 		let sessionConfiguration = URLSessionConfiguration.default
+		
+		// now we created a background session configuration, we need to handle it App Delegate
+		// when a OS daemon launches the app in background and handled the downloaded data.
+		let backgroundSessionConfiguration = URLSessionConfiguration.background(withIdentifier: "experimental")
 		
 		//sessionConfiguration.httpCookieStorage
 		//sessionConfiguration.urlCredentialStorage
@@ -111,6 +116,19 @@ extension NetworkLayer: URLSessionDownloadDelegate {
 		
 		let percentage = (Double(bytesWritten)/Double(totalBytesExpectedToWrite)) * 100.0
 		print("total --> \(totalBytesExpectedToWrite), received --> \(bytesWritten), percentage = \(percentage)")
+	}
+	
+	// Background execution
+	func urlSessionDidFinishEvents(forBackgroundURLSession session: URLSession) {
+		
+		if let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+		   let completionHandler = appDelegate.backgroundExecutionCompletionHandler {
+			
+			DispatchQueue.main.async {
+				appDelegate.backgroundExecutionCompletionHandler = nil
+				completionHandler()
+			}
+		}
 	}
 }
 
