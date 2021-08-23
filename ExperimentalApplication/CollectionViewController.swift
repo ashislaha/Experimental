@@ -31,6 +31,7 @@ class CollectionViewController: UICollectionViewController {
 		collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: "header", withReuseIdentifier: "header")
 		
 		navigaitonBarAndNavigationItemTesting()
+		let _ = ExceptionHandling()
 	}
 	
 	

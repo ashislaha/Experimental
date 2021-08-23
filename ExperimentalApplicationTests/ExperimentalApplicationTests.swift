@@ -83,8 +83,5 @@ extension ExperimentalApplicationTests {
 		*/
 		
 		wait(for: [promise], timeout: 3.0)
-		
-		
-		
 	}
 }

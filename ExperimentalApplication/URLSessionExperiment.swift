@@ -40,13 +40,14 @@ class NetworkLayer: NSObject {
 		// we can set up time-out value, http request headers, cache policy etc.
 		let sessionConfiguration = URLSessionConfiguration.default
 		
-		// now we created a background session configuration, we need to handle it App Delegate
-		// when a OS daemon launches the app in background and handled the downloaded data.
-		let backgroundSessionConfiguration = URLSessionConfiguration.background(withIdentifier: "experimental")
-		
 		//sessionConfiguration.httpCookieStorage
 		//sessionConfiguration.urlCredentialStorage
 		//sessionConfiguration.urlCache
+		
+		
+		// now we created a background session configuration, we need to handle it App Delegate
+		// when a OS daemon launches the app in background and handled the downloaded data.
+		let backgroundSessionConfiguration = URLSessionConfiguration.background(withIdentifier: "experimental")
 		
 
 		let session = URLSession(configuration: sessionConfiguration, delegate: self, delegateQueue: OperationQueue())
