@@ -19,8 +19,9 @@
 		555F73F226D22D33003D4D82 /* TestableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F73F126D22D33003D4D82 /* TestableModel.swift */; };
 		5578856926D269C80071505D /* URLSessionExperiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578856826D269C80071505D /* URLSessionExperiment.swift */; };
 		5578856B26D344A30071505D /* FileManagerExperiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578856A26D344A30071505D /* FileManagerExperiment.swift */; };
-		5578856D26D3469E0071505D /* ImprovingAppPerformanceExperiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578856C26D3469E0071505D /* ImprovingAppPerformanceExperiment.swift */; };
+		5578856D26D3469E0071505D /* MemoryManagementExample2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578856C26D3469E0071505D /* MemoryManagementExample2.swift */; };
 		5578856F26D34EAD0071505D /* ExceptionHandlingExperiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578856E26D34EAD0071505D /* ExceptionHandlingExperiment.swift */; };
+		557D777A26DBAEFC00D90014 /* MemoryManagementExample1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D777926DBAEFC00D90014 /* MemoryManagementExample1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +60,9 @@
 		555F73F126D22D33003D4D82 /* TestableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestableModel.swift; sourceTree = "<group>"; };
 		5578856826D269C80071505D /* URLSessionExperiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExperiment.swift; sourceTree = "<group>"; };
 		5578856A26D344A30071505D /* FileManagerExperiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExperiment.swift; sourceTree = "<group>"; };
-		5578856C26D3469E0071505D /* ImprovingAppPerformanceExperiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImprovingAppPerformanceExperiment.swift; sourceTree = "<group>"; };
+		5578856C26D3469E0071505D /* MemoryManagementExample2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryManagementExample2.swift; sourceTree = "<group>"; };
 		5578856E26D34EAD0071505D /* ExceptionHandlingExperiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExceptionHandlingExperiment.swift; sourceTree = "<group>"; };
+		557D777926DBAEFC00D90014 /* MemoryManagementExample1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryManagementExample1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,15 +114,16 @@
 			isa = PBXGroup;
 			children = (
 				55518F6126D124B100FCD06E /* CollectionViewController.swift */,
-				555F73F126D22D33003D4D82 /* TestableModel.swift */,
+				5578856E26D34EAD0071505D /* ExceptionHandlingExperiment.swift */,
+				557D777926DBAEFC00D90014 /* MemoryManagementExample1.swift */,
+				5578856C26D3469E0071505D /* MemoryManagementExample2.swift */,
 				5578856826D269C80071505D /* URLSessionExperiment.swift */,
 				5578856A26D344A30071505D /* FileManagerExperiment.swift */,
-				5578856E26D34EAD0071505D /* ExceptionHandlingExperiment.swift */,
-				5578856C26D3469E0071505D /* ImprovingAppPerformanceExperiment.swift */,
 				555F73F326D22D72003D4D82 /* Unnecessary */,
 				55518F3F26D1249C00FCD06E /* Info.plist */,
 				55518F3326D1249A00FCD06E /* SceneDelegate.swift */,
 				55518F3126D1249A00FCD06E /* AppDelegate.swift */,
+				555F73F126D22D33003D4D82 /* TestableModel.swift */,
 			);
 			path = ExperimentalApplication;
 			sourceTree = "<group>";
@@ -284,9 +287,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				557D777A26DBAEFC00D90014 /* MemoryManagementExample1.swift in Sources */,
 				55518F6226D124B100FCD06E /* CollectionViewController.swift in Sources */,
 				5578856F26D34EAD0071505D /* ExceptionHandlingExperiment.swift in Sources */,
-				5578856D26D3469E0071505D /* ImprovingAppPerformanceExperiment.swift in Sources */,
+				5578856D26D3469E0071505D /* MemoryManagementExample2.swift in Sources */,
 				55518F3626D1249A00FCD06E /* ViewController.swift in Sources */,
 				55518F3226D1249A00FCD06E /* AppDelegate.swift in Sources */,
 				5578856B26D344A30071505D /* FileManagerExperiment.swift in Sources */,

@@ -30,36 +30,9 @@ class CollectionViewController: UICollectionViewController {
 		collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
 		collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: "header", withReuseIdentifier: "header")
 		
-		navigaitonBarAndNavigationItemTesting()
-		let _ = ExceptionHandling()
+		testing()
 	}
-	
-	
-	private func navigaitonBarAndNavigationItemTesting() {
-		navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
-		navigationItem.title = "Testing"
-		
-		navigationController?.navigationBar.barTintColor = .blue
-		
-		// as navigation bar is managed by navigation controller, we cannot push a new navigation item directly to navigation bar.
-		// Instead of that we can update the controller navigation item.
-		
-		let newNavigationItem = UINavigationItem(title: "New Item")
-		newNavigationItem.leftBarButtonItems = [
-			UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: nil),
-			UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: nil),
-		]
-		newNavigationItem.rightBarButtonItems = [
-			UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil),
-			UIBarButtonItem(barButtonSystemItem: .done, target: self, action: nil),
-		]
-		
-		navigationItem.leftBarButtonItems = newNavigationItem.leftBarButtonItems
-		navigationItem.rightBarButtonItems = newNavigationItem.rightBarButtonItems
-		navigationItem.prompt = "This is a prompt title"
-		
-	}
-	
+
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
@@ -203,6 +176,53 @@ class CollectionViewController: UICollectionViewController {
 		])
 		return view
 
+	}
+	
+}
+
+// MARK:- Testing on Memory Management, navigationBar, navigationItem etc.
+
+extension CollectionViewController {
+	
+	private func testing() {
+		navigaitonBarAndNavigationItemTesting()
+		let _ = ExceptionHandling()
+	}
+	
+	private func navigaitonBarAndNavigationItemTesting() {
+		navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+		navigationItem.title = "Testing"
+		
+		navigationController?.navigationBar.barTintColor = .white
+		
+		// as navigation bar is managed by navigation controller, we cannot push a new navigation item directly to navigation bar.
+		// Instead of that we can update the controller navigation item.
+		
+		let newNavigationItem = UINavigationItem(title: "New Item")
+		newNavigationItem.leftBarButtonItems = [
+			UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: nil),
+			UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: nil),
+		]
+		newNavigationItem.rightBarButtonItems = [
+			UIBarButtonItem(title: "M1", style: .plain, target: self, action: #selector(openRedGreenFlow)),
+			UIBarButtonItem(title: "M2", style: .plain, target: self, action: #selector(showTable)),
+			
+		]
+		
+		navigationItem.leftBarButtonItems = newNavigationItem.leftBarButtonItems
+		navigationItem.rightBarButtonItems = newNavigationItem.rightBarButtonItems
+		navigationItem.prompt = "This is a prompt"
+	}
+	
+	
+	@objc private func openRedGreenFlow() {
+		let redVC = RedViewcontroller()
+		navigationController?.pushViewController(redVC, animated: true)
+	}
+	
+	@objc private func showTable() {
+		let table = TableContainerController()
+		navigationController?.pushViewController(table, animated: true)
 	}
 	
 }

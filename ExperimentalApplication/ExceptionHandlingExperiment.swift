@@ -99,6 +99,7 @@ class AccountHolder: NSObject {
 	static let creditLimit: Double = 10000.0
 	
 	init(name: String, accountNumber: String, initialDeposit: Double) throws {
+		
 		if initialDeposit < AccountHolder.minimumAmount {
 			throw AccountHolderError.belowMinimumAmount
 		}
@@ -106,6 +107,7 @@ class AccountHolder: NSObject {
 		self.name = name
 		self.accountNumber = accountNumber
 		self.amount = initialDeposit
+		
 		super.init()
 	}
 	
